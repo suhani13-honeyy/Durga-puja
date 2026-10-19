@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dandiya Night | Bihar Sharif</title>
+<style>
+  /* ===== MAA DURGA ANIMATED BACKGROUND ===== */
+
+body {
+    background: #100006;
+    color: white;
+    position: relative;
+    isolation: isolate;
+}
+
+/* Background Image */
+
+.durga-background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 0, 8, 0.72),
+            rgba(20, 0, 10, 0.45),
+            rgba(15, 0, 8, 0.75)
+        ),
+        url("maa-durga.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: durgaGlow 6s ease-in-out infinite alternate;
+}
+
+/* Golden Divine Glow */
+
+@keyframes durgaGlow {
+    from {
+        filter: brightness(0.65) saturate(1);
+    }
+
+    to {
+        filter: brightness(1) saturate(1.3);
+    }
+}
+
+/* Keep website content above the background */
+
+body > *:not(.durga-background):not(#star-layer):not(#flower-layer) {
+    position: relative;
+}
+
+/* Star Layer */
+
+#star-layer,
+#flower-layer {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#star-layer {
+    z-index: 10;
+}
+
+#flower-layer {
+    z-index: 20;
+}
+
+/* Twinkling Stars */
+
+.magic-star {
+    position: absolute;
+    color: #fff3a0;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 12px gold,
+        0 0 25px orange;
+
+    animation: starTwinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+    0% {
+        opacity: 0.15;
+        transform: scale(0.5) rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.4) rotate(90deg);
+    }
+}
+
+/* Shooting Stars */
+
+.shooting-star {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 120px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #fff5b0,
+        #ffbd35,
+        transparent
+    );
+
+    box-shadow: 0 0 12px gold;
+    border-radius: 50%;
+
+    transform: rotate(-35deg);
+    animation: shootingStar 2s linear forwards;
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translate(0, 0) rotate(-35deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-250px, 350px) rotate(-35deg);
+        opacity: 0;
+    }
+}
+
+/* Falling Flowers */
+
+.falling-flower {
+    position: absolute;
+    top: -50px;
+
+    font-size: 24px;
+    filter: drop-shadow(0 0 7px #ffb6c1);
+
+    animation: flowerRain linear forwards;
+}
+
+@keyframes flowerRain {
+    0% {
+        transform: translate3d(0, -30px, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(35px, 50vh, 0) rotate(220deg);
+    }
+
+    100% {
+        transform: translate3d(-30px, 110vh, 0) rotate(600deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile Optimization */
+
+@media (max-width: 600px) {
+    .durga-background {
+        background-position: center center;
+    }
+
+    .shooting-star {
+        width: 80px;
+    }
+
+    .falling-flower {
+        font-size: 19px;
+    }
+}
+:root{--gold:#ffd52a;--red:#79091d;--wine:#26050d;--cream:#ffe9b0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;background:#080304;color:#fff4dc;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 5%;background:#100207ee;border-bottom:1px solid #9d741c;backdrop-filter:blur(10px)}
+.logo{font-weight:bold;color:var(--gold);white-space:nowrap}
+nav a{color:#fff0c2;text-decoration:none;font-size:13px;margin:0 7px}
+nav a:hover{color:var(--gold)}
+.hero{min-height:420px;padding:65px 5% 45px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at top,#4a101c 0%,#15050a 58%,#080304 100%)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(125deg,transparent 0 28px,#ffd52a 29px 30px,transparent 31px 70px);pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px;margin-bottom:18px}
+h1{font-size:clamp(30px,6vw,56px);line-height:1.15;color:var(--gold);text-shadow:0 0 20px #ffae0060;margin-bottom:18px}
+.hero p{color:#e6cfbf;line-height:1.8;margin:0 auto 24px;max-width:750px;font-family:Arial,sans-serif}
+.pills{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.btn{border:1px solid #9d741c;border-radius:28px;padding:12px 18px;background:linear-gradient(135deg,#ffd52a,#ff9d00);color:#31040b;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 18px #ffd52a70}
+.btn.secondary{background:#70091c;color:#fff0cf;border-color:#a52c39}
+section{padding:38px 5%}
+.title{text-align:center;color:var(--gold);font-size:clamp(23px,4vw,32px);margin-bottom:12px}
+.subtitle{text-align:center;color:#d8b9ad;font:14px/1.7 Arial,sans-serif;margin:0 auto 25px;max-width:780px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1100px;margin:auto}
+.photo{position:relative;height:180px;border:1px solid #4d2630;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#35101a,#16060a);box-shadow:0 8px 20px #0008}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}.photo img[alt]{background:linear-gradient(135deg,#35101a,#16060a)}
+.photo .caption{position:absolute;bottom:0;left:0;right:0;padding:10px 7px;text-align:center;background:#70091ce8;font:bold 12px Arial,sans-serif}
+.photo .emoji{height:100%;display:grid;place-items:center;font-size:54px}
+.info{max-width:1000px;margin:0 auto;background:linear-gradient(135deg,#26070f,#17050a);border:1px solid #704d1b;border-left:4px solid #ffd52a;border-radius:18px;padding:24px;box-shadow:0 0 22px #ffd52a12}
+.info h2{color:var(--gold);font-size:23px;margin-bottom:16px}
+.info ul{padding-left:20px;color:#e6d1c8;font:14px/1.8 Arial,sans-serif}
+.info li{margin:7px 0}.info li::marker{color:var(--gold)}
+.rhythm{max-width:900px;margin:0 auto;text-align:center;background:linear-gradient(135deg,#21070d,#130409);border:1px solid #79541c;border-radius:18px;padding:25px;box-shadow:0 0 22px #ffd52a10}
+.pads{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:22px 0}
+.pad{min-width:95px;height:72px;border:1px solid #b28a28;border-radius:14px;background:#5c0b1b;color:#ffe6a2;font-size:24px;cursor:pointer}
+.pad:active{transform:scale(.96);background:#a31b30}
+.rhythm p{font:14px/1.7 Arial,sans-serif;color:#d9bdb5}
+footer{text-align:center;padding:24px;background:#240309;color:var(--gold);border-top:1px solid #684817;font-size:13px;letter-spacing:1px}
+.spark{position:fixed;top:-30px;z-index:50;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:.25}}
+@media(max-width:650px){nav{align-items:flex-start;flex-direction:column}nav div:last-child{display:flex;flex-wrap:wrap;gap:8px}nav a{margin:0 5px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{height:145px}section{padding:30px 4%}.info{padding:18px}.hero{padding-top:50px}}
+@media(max-width:380px){.gallery{grid-template-columns:1fr}.photo{height:190px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">🌕 DURGA PUJA</div>
+  <div>
+    <a href="#home">Mahotsav</a>
+    <a href="#gallery">Dandiya Night</a>
+    <a href="#about">About</a>
+    <a href="#rhythm">Rhythm</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="eyebrow">🔴 NAVRATRI NIGHT FESTIVITY</div>
+    <h1>DANDIYA RAAS &amp; GARBA NIGHT</h1>
+    <p>📍 Bihar Sharif, Nalanda<br>Celebrate Navratri with colourful Dandiya Raas, energetic Garba, traditional attire, devotional music and joyful family moments.</p>
+    <div class="pills">
+      <a class="btn" href="#gallery">📸 Explore Gallery</a>
+      <a class="btn secondary" href="#rhythm">🥁 Try Dandiya Beats</a>
+      <button class="btn secondary" onclick="flowerRain()">🌸 Flower Shower</button>
+    </div>
+  </div>
+</header>
+
+<section id="gallery">
+  <h2 class="title">✨ Dandiya Night Gallery</h2>
+  <p class="subtitle">A colourful celebration of dance, lights, devotion and togetherness.</p>
+  <div class="gallery">
+    <article class="photo">
+      <img src="https://wanderon-images.gumlet.io/gallery/new/2025/09/01/1756726106375-dandiya.jpg?auto=compress%2Cformat&amp;w=1024" alt="People dancing at a colourful Dandiya night" loading="lazy">
+      <div class="caption">Clashing Dandiya Sticks</div>
+    </article>
+    <article class="photo">
+      <img src="https://c.ndtvimg.com/2025-09/q49l5khc_global-garba-festival_625x300_26_September_25.jpg" alt="Garba dancers celebrating under lights" loading="lazy">
+      <div class="caption">Garba Raas Circle</div>
+    </article>
+    <article class="photo">
+      <img src="https://www.dandiyainmumbai.com/assets/images/hero-dandiya.png" alt="Dandiya celebration with festive lights" loading="lazy">
+      <div class="caption">Night Lights &amp; Arena</div>
+    </article>
+    <article class="photo">
+      <img src="https://c.ndtvimg.com/2025-09/70oauc8o_garba-night_625x300_23_September_25.jpg?im=FaceCrop%2Calgorithm%3Ddnn%2Cwidth%3D1200%2Cheight%3D738" alt="Traditional Garba celebration" loading="lazy">
+      <div class="caption">Navratri Celebration</div>
+    </article>
+    <article class="photo">
+      <img src="https://img-cdn.publive.online/fit-in/1200x675/local-samosal/media/media_files/nafXRfvryB5H8LOhBiaP.png" alt="Dancers wearing colourful traditional outfits" loading="lazy">
+      <div class="caption">Traditional Festive Attire</div>
+    </article>
+    <article class="photo">
+      <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/10/17/e0d009cbfdb25c9149606955d9109a141697543619441359_original.jpg?impolicy=abp_cdn&amp;imwidth=1200" alt="Women performing Garba with Dandiya sticks" loading="lazy">
+      <div class="caption">Dandiya Dance Celebration</div>
+    </article>
+  </div>
+</section>
+
+<section id="about">
+  <div class="info">
+    <h2>⭐ Why is Dandiya Night special?</h2>
+    <ul>
+      <li><b>Navratri Celebration:</b> Dandiya and Garba bring people together to celebrate devotion, culture and joy.</li>
+      <li><b>Traditional Dance:</b> Colourful sticks, circular Garba steps and rhythmic claps create a lively atmosphere.</li>
+      <li><b>Festive Attire:</b> Chaniya choli, mirror-work outfits, kurtas and colourful dupattas make the evening vibrant.</li>
+      <li><b>Devotional Beginning:</b> Many celebrations begin with prayers or Aarti dedicated to Maa Durga.</li>
+      <li><b>Music and Lights:</b> Folk rhythms, decorations and lights make the night memorable.</li>
+      <li><b>Family-Friendly Fun:</b> Dance, food and cultural activities can be enjoyed with friends and family.</li>
+    </ul>
+    <p style="margin-top:15px;color:#c8a9a0;font:12px/1.7 Arial,sans-serif">Note: This page is a festive-themed demo. Confirm actual Bihar Sharif event locations, dates and arrangements with local organisers.</p>
+  </div>
+</section>
+
+<section id="rhythm">
+  <div class="rhythm">
+    <h2 class="title">🥁 Virtual Dandiya Rhythm Synthesizer</h2>
+    <p>Tap a pad or use keyboard keys <b>[1], [2], [3], [4]</b> to create simple beats. Tap Start Rhythm for a repeating pattern.</p>
+    <div class="pads">
+      <button class="pad" onclick="beat(1)">🥁<br><small>Beat 1</small></button>
+      <button class="pad" onclick="beat(2)">🪵<br><small>Beat 2</small></button>
+      <button class="pad" onclick="beat(3)">🔔<br><small>Beat 3</small></button>
+      <button class="pad" onclick="beat(4)">👏<br><small>Beat 4</small></button>
+    </div>
+    <div class="pills">
+      <button class="btn" id="rhythmToggle" onclick="toggleRhythm()">▶ Start Rhythm</button>
+      <button class="btn secondary" onclick="flowerRain()">🌸 Celebrate</button>
+    </div>
+    <p id="rhythmStatus" style="margin-top:15px">Ready! Press a beat to hear a sound.</p>
+  </div>
+</section>
+
+<marquee><footer>💛 Dancing feet, joyful hearts, and endless memories. ✨<br><br>🌺 Jai Mata Di • Dandiya Night</footer></marquee>
+
+
+<script>
+  /* ===== DURGA NIGHT MAGIC ANIMATIONS ===== */
+
+// Create background layers
+
+function setupDurgaAnimations() {
+
+    if (!document.querySelector(".durga-background")) {
+        const bg = document.createElement("div");
+        bg.className = "durga-background";
+
+        document.body.prepend(bg);
+    }
+
+    let starLayer = document.getElementById("star-layer");
+
+    if (!starLayer) {
+        starLayer = document.createElement("div");
+        starLayer.id = "star-layer";
+        document.body.appendChild(starLayer);
+    }
+
+    let flowerLayer = document.getElementById("flower-layer");
+
+    if (!flowerLayer) {
+        flowerLayer = document.createElement("div");
+        flowerLayer.id = "flower-layer";
+        document.body.appendChild(flowerLayer);
+    }
+
+    // Create twinkling stars
+
+    for (let i = 0; i < 65; i++) {
+        const star = document.createElement("span");
+
+        star.className = "magic-star";
+
+        star.innerHTML = Math.random() > 0.5 ? "✦" : "✧";
+
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+
+        star.style.fontSize =
+            (Math.random() * 12 + 7) + "px";
+
+        star.style.animationDelay =
+            Math.random() * 3 + "s";
+
+        starLayer.appendChild(star);
+    }
+
+    // Start shooting stars
+
+    setInterval(() => {
+
+        const shooting = document.createElement("div");
+
+        shooting.className = "shooting-star";
+
+        shooting.style.left =
+            (20 + Math.random() * 100) + "%";
+
+        shooting.style.top =
+            (Math.random() * 45) + "%";
+
+        starLayer.appendChild(shooting);
+
+        setTimeout(() => {
+            shooting.remove();
+        }, 2200);
+
+    }, 900);
+
+    // Start automatic flower rain
+
+    setInterval(() => {
+
+        const flower = document.createElement("span");
+
+        flower.className = "falling-flower";
+
+        const flowers = [
+            "🌺", "🌸", "🌼", "🌹", "✨"
+        ];
+
+        flower.textContent =
+            flowers[Math.floor(Math.random() * flowers.length)];
+
+        flower.style.left = Math.random() * 100 + "%";
+
+        flower.style.animationDuration =
+            (Math.random() * 3 + 4) + "s";
+
+        flowerLayer.appendChild(flower);
+
+        setTimeout(() => {
+            flower.remove();
+        }, 7500);
+
+    }, 350);
+
+}
+
+// Run after HTML loads
+
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        setupDurgaAnimations
+    );
+} else {
+    setupDurgaAnimations();
+}
+let audioCtx;
+let rhythmTimer=null;
+let rhythmStep=1;
+
+function getAudio(){
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==="suspended") audioCtx.resume();
+  return audioCtx;
+}
+function beat(type){
+  const ctx=getAudio();
+  const osc=ctx.createOscillator();
+  const gain=ctx.createGain();
+  const now=ctx.currentTime;
+  const frequencies={1:180,2:420,3:850,4:260};
+  osc.type=type===1?"triangle":"sine";
+  osc.frequency.setValueAtTime(frequencies[type]||300,now);
+  if(type===1) osc.frequency.exponentialRampToValueAtTime(65,now+0.16);
+  gain.gain.setValueAtTime(0.35,now);
+  gain.gain.exponentialRampToValueAtTime(0.001,now+0.22);
+  osc.connect(gain);gain.connect(ctx.destination);
+  osc.start(now);osc.stop(now+0.23);
+  document.getElementById("rhythmStatus").textContent="🎶 Beat "+type+" playing!";
+}
+function toggleRhythm(){
+  const btn=document.getElementById("rhythmToggle");
+  if(rhythmTimer){
+    clearInterval(rhythmTimer);rhythmTimer=null;
+    btn.textContent="▶ Start Rhythm";
+    document.getElementById("rhythmStatus").textContent="Rhythm stopped.";
+  }else{
+    getAudio();
+    beat(rhythmStep);
+    rhythmTimer=setInterval(()=>{beat(rhythmStep);rhythmStep=rhythmStep%4+1},500);
+    btn.textContent="⏸ Stop Rhythm";
+    document.getElementById("rhythmStatus").textContent="🥁 Dandiya rhythm is playing!";
+  }
+}
+document.addEventListener("keydown",e=>{
+  if(["1","2","3","4"].includes(e.key)) beat(Number(e.key));
+});
+function flowerRain(){
+  const flowers=["🌸","🌺","🌼","✨","💛"];
+  for(let i=0;i<32;i++){
+    const el=document.createElement("span");
+    el.className="spark";
+    el.textContent=flowers[Math.floor(Math.random()*flowers.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.fontSize=(18+Math.random()*18)+"px";
+    el.style.animationDuration=(3+Math.random()*4)+"s";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),7500);
+  }
+}
+</script>
+</body>
+</html>

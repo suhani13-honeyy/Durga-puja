@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohaddinagar Durga Puja Pandal | Bihar Sharif</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff8f2;
+    color: #4b1730;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(90deg, #780b32, #c62845);
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 4px 15px #0002;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ffe6a7;
+}
+
+/* HERO */
+.hero {
+    min-height: 580px;
+    padding: 70px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(#45051bcc, #8d1230c9),
+        url("https://images.unsplash.com/photo-1604608672516-8d4e1d9f9e2d?auto=format&fit=crop&w=1600&q=80");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffdc91;
+    color: #75112d;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 6vw, 65px);
+    margin-bottom: 20px;
+    text-shadow: 2px 3px 10px #0008;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffca65;
+    color: #72112c;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 25px;
+    margin: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: white;
+}
+
+/* COMMON SECTION */
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(26px, 4vw, 38px);
+    color: #9b1740;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #805667;
+    margin: 0 auto 35px;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.divider {
+    text-align: center;
+    color: #d18b2e;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+/* ABOUT */
+.about-box {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    line-height: 1.9;
+    box-shadow: 0 8px 30px #70133312;
+    border-left: 5px solid #c52a50;
+}
+
+.about-box h3 {
+    color: #a51a43;
+    margin-bottom: 12px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 22px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #64122b12;
+    transition: 0.3s;
+    border-bottom: 4px solid #e5a04b;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card .icon {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #a51a43;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.7;
+    color: #6b4a57;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px #0001;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.025);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background: #f4dbe3;
+}
+
+.gallery-item p {
+    padding: 15px;
+    font-weight: bold;
+    color: #92173c;
+    text-align: center;
+}
+
+.photo-note {
+    max-width: 800px;
+    margin: 25px auto 0;
+    text-align: center;
+    font-size: 14px;
+    color: #775562;
+    line-height: 1.7;
+}
+
+/* AARTI */
+.aarti-section {
+    background: linear-gradient(135deg, #6c0c2d, #b51d43);
+    color: white;
+    text-align: center;
+}
+
+.aarti-section .section-title {
+    color: #ffdf9c;
+}
+
+.aarti-section .section-subtitle {
+    color: #ffe8ed;
+}
+
+.aarti-box {
+    max-width: 750px;
+    margin: auto;
+    background: #ffffff12;
+    border: 1px solid #ffffff40;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.aarti-box h3 {
+    color: #ffdf9c;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.aarti-box p {
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.audio-player {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.small-note {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* LOCATION */
+.location-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px #0001;
+}
+
+.location-box h3 {
+    color: #a51a43;
+    margin-bottom: 15px;
+}
+
+.location-box p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.map-frame {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+/* FLOWERS */
+.flower {
+    position: fixed;
+    top: -35px;
+    z-index: 999;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-30px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(650deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: #40091f;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    line-height: 1.9;
+}
+
+footer a {
+    color: #ffdb91;
+    text-decoration: none;
+}
+
+/* BACK TO TOP */
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 18px;
+    background: #a51a43;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 21px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 55px 18px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 48px 18px;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+
+    .map-frame {
+        height: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">🌺 Mohaddinagar Durga Puja</div>
+
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Photos</a>
+        <a href="#aarti">Aarti</a>
+        <a href="#location">Location</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <div class="hero-content">
+        <div class="badge">🪔 Durga Puja Special</div>
+
+        <h1>🌺 Mohaddinagar Durga Puja Pandal 🌺</h1>
+
+        <p>
+            Celebrate the divine blessings of Maa Durga.
+            Experience devotion, beautiful decorations, traditional
+            puja and the joyful spirit of Durga Puja in Bihar Sharif.
+        </p>
+
+        <a href="#about" class="btn">Explore Pandal</a>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Mohaddinagar+Durga+Puja+Bihar+Sharif"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn">
+            📍 Find Location
+        </a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">🙏 About Mohaddinagar Pandal</h2>
+    <div class="divider">🌼 ❖ 🌼</div>
+
+    <div class="about-box">
+        <h3>Welcome to Mohaddinagar Durga Puja</h3>
+
+        <p>
+            Mohaddinagar is a locality in Bihar Sharif, Bihar.
+            During Durga Puja, devotees celebrate the worship of
+            Maa Durga with faith, devotion and festive enthusiasm.
+        </p>
+
+        <p>
+            A Durga Puja pandal is a temporary decorated place where
+            devotees gather to seek the blessings of Maa Durga.
+            Decorations, the idol, devotional songs and aarti can
+            make the celebration a memorable experience.
+        </p>
+
+        <p>
+            <strong>Important:</strong>
+            The exact theme, decoration, programme timings and
+            arrangements of the Mohaddinagar pandal for 2026 should
+            be confirmed locally with the puja committee.
+        </p>
+    </div>
+</section>
+
+<!-- PUJA INFORMATION -->
+<section style="background:#fff0f3;">
+    <h2 class="section-title">🪔 Puja & Celebration</h2>
+
+    <p class="section-subtitle">
+        Learn about the main traditions associated with Durga Puja.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🙏</div>
+            <h3>Maa Durga Puja</h3>
+            <p>
+                Devotees offer prayers to Maa Durga and seek
+                blessings for peace, happiness and prosperity.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪔</div>
+            <h3>Aarti</h3>
+            <p>
+                Devotional aarti is performed as an expression
+                of faith and reverence for the Goddess.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌸</div>
+            <h3>Flowers & Decoration</h3>
+            <p>
+                Flowers, lights and decorative elements are
+                commonly used to create a festive atmosphere.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎉</div>
+            <h3>Community Celebration</h3>
+            <p>
+                Families and devotees come together to celebrate
+                the festival and participate in religious events.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section id="gallery">
+    <h2 class="section-title">📸 Pandal Photo Gallery</h2>
+
+    <p class="section-subtitle">
+        Explore Durga Puja decoration and festival visuals.
+        Tap a photo to view it larger.
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="light3.jpg"
+                alt="Durga Puja festival decoration"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>🌺 Festival Decoration</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="moh.jpg"
+                alt="Colourful festive decorations"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>✨ Colourful Celebration</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="moh2.jpg"
+                alt="Festive lights and decoration"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>🪔 Festive Lights</p>
+        </div>
+
+    </div>
+
+    <p class="photo-note">
+        Note: These are illustrative festival images, not verified
+        photographs of the actual Mohaddinagar pandal. Replace them
+        with real local pandal photographs when available.
+    </p>
+</section>
+
+<!-- AARTI -->
+<section class="aarti-section" id="aarti">
+    <h2 class="section-title">🪔 Maa Durga Aarti</h2>
+
+    <p class="section-subtitle">
+        Listen to a devotional aarti while exploring the website.
+    </p>
+
+    <div class="aarti-box">
+        <h3>🌺 Jai Mata Di 🌺</h3>
+
+        <p>
+            May Maa Durga bless everyone with courage,
+            happiness, peace and prosperity.
+        </p>
+
+        <p>
+            You can play a Durga Aarti recording using the
+            button below.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.youtube.com/results?search_query=Maa+Durga+Aarti"
+            target="_blank"
+            rel="noopener noreferrer">
+            ▶ Listen to Durga Aarti
+        </a>
+
+        <p class="small-note">
+            Aarti timings at the actual pandal have not been verified.
+            Please confirm them with the local puja committee.
+        </p>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+    <h2 class="section-title">📍 Pandal Location</h2>
+
+    <p class="section-subtitle">
+        Find Mohaddinagar in Bihar Sharif using Google Maps.
+    </p>
+
+    <div class="location-box">
+        <h3>Mohaddinagar, Bihar Sharif, Bihar</h3>
+
+        <p>
+            Use the map to search for the Mohaddinagar Durga Puja
+            pandal and check the route from your current location.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.google.com/maps/search/?api=1&query=Mohaddinagar+Durga+Puja+Bihar+Sharif"
+            target="_blank"
+            rel="noopener noreferrer">
+            🗺️ Open Google Maps
+        </a>
+
+        <iframe
+            class="map-frame"
+            title="Map showing Mohaddinagar Bihar Sharif search area"
+            src="https://maps.google.com/maps?q=Mohaddinagar%2C%20Bihar%20Sharif%2C%20Bihar&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <p class="small-note">
+            The map shows the locality search area; it may not mark
+            the exact temporary pandal entrance.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>🌺 Mohaddinagar Durga Puja 🌺</h3>
+
+    <p>Celebrating faith, devotion and the blessings of Maa Durga.</p>
+
+    <p>
+        <a href="index.html">← Back to All Bihar Sharif Pandals</a>
+    </p>
+
+    <p>Made with ❤️ for Durga Puja | Bihar Sharif, Bihar</p>
+
+    <p>© <span id="year"></span> Mohaddinagar Durga Puja</p>
+</footer>
+
+<!-- PHOTO POPUP -->
+<div
+    id="photoModal"
+    onclick="closePhoto()"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:#000e;
+        z-index:2000;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+    ">
+
+    <button
+        onclick="closePhoto()"
+        aria-label="Close photo"
+        style="
+            position:absolute;
+            top:20px;
+            right:25px;
+            color:white;
+            background:none;
+            border:none;
+            font-size:35px;
+            cursor:pointer;
+        ">×</button>
+
+    <img
+        id="modalImage"
+        alt="Enlarged festival photograph"
+        style="
+            max-width:95%;
+            max-height:85vh;
+            object-fit:contain;
+            border-radius:12px;
+        ">
+</div>
+
+<button
+    class="top-btn"
+    id="topBtn"
+    aria-label="Back to top"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    ↑
+</button>
+
+<script>
+// Falling flower animation
+const flowerSymbols = ["🌸", "🌺", "🌼", "🌷"];
+
+function createFlower() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    const flower = document.createElement("div");
+    flower.className = "flower";
+    flower.textContent =
+        flowerSymbols[Math.floor(Math.random() * flowerSymbols.length)];
+
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.fontSize = (14 + Math.random() * 15) + "px";
+    flower.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 11000);
+}
+
+// Create flowers at an interval
+setInterval(createFlower, 650);
+
+// Photo gallery popup
+function openPhoto(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("photoModal").style.display = "flex";
+}
+
+function closePhoto() {
+    document.getElementById("photoModal").style.display = "none";
+}
+
+// Back-to-top button
+window.addEventListener("scroll", function() {
+    const topBtn = document.getElementById("topBtn");
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+// Current year
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tikulipar Durga Puja | Bihar Sharif</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #101044;
+    --blue: #2929a5;
+    --magenta: #d62886;
+    --pink: #ff76bb;
+    --gold: #ffd166;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #25234a;
+    background: #fff9fe;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    background: var(--navy);
+    color: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--gold);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+/* HERO */
+.hero {
+    min-height: 590px;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background:
+        radial-gradient(circle at 20% 20%, #ff76bb66, transparent 30%),
+        radial-gradient(circle at 80% 70%, #ffd16655, transparent 30%),
+        linear-gradient(135deg, #101044, #2929a5 50%, #d62886);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "✦  ✧  ✨  ✦  ✧  ✨  ✦";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    font-size: 25px;
+    letter-spacing: 20px;
+    color: var(--gold);
+    animation: sparkle 3s infinite alternate;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+    color: var(--gold);
+    margin-bottom: 22px;
+    background: #10104466;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 4px 15px #0008;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 23px;
+    margin: 6px;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #0004;
+}
+
+.btn-outline {
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    color: var(--navy);
+}
+
+/* SECTIONS */
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: clamp(27px, 5vw, 38px);
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.section-title h2 span {
+    color: var(--magenta);
+}
+
+.section-title p {
+    color: #77708c;
+    line-height: 1.7;
+}
+
+.about {
+    background: white;
+}
+
+.about-box {
+    max-width: 950px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f6e8ff, #fff0f8);
+    border-left: 5px solid var(--magenta);
+    box-shadow: 0 8px 25px #2929a510;
+}
+
+.about-box p {
+    line-height: 1.9;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* CARDS */
+.highlights {
+    background: #f8f0ff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    padding: 28px 22px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    border-bottom: 4px solid var(--magenta);
+    box-shadow: 0 8px 25px #2929a510;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--gold);
+}
+
+.card .icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #716a83;
+    line-height: 1.7;
+}
+
+/* GALLERY */
+.gallery {
+    background: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 17px;
+    position: relative;
+    background: #f5e6ff;
+    box-shadow: 0 7px 22px #10104418;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-item p {
+    padding: 14px;
+    color: var(--navy);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* LOCATION */
+.location {
+    background: linear-gradient(135deg, #101044, #2929a5);
+    color: white;
+    text-align: center;
+}
+
+.location .section-title h2 {
+    color: white;
+}
+
+.location .section-title p {
+    color: #eee0ff;
+}
+
+.map-box {
+    max-width: 950px;
+    margin: 25px auto;
+    border: 4px solid var(--gold);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+
+/* AARTI */
+.aarti {
+    background: #fff0f8;
+    text-align: center;
+}
+
+.aarti-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #d6288615;
+}
+
+.aarti-box .om {
+    font-size: 55px;
+    color: var(--magenta);
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #0a0a30;
+    color: white;
+    text-align: center;
+    padding: 27px 15px;
+    line-height: 1.8;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* FLOWERS */
+.flower {
+    position: fixed;
+    top: -40px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: flowerFall linear forwards;
+}
+
+@keyframes flowerFall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(115vh) rotate(650deg);
+        opacity: 0.2;
+    }
+}
+
+@keyframes sparkle {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* IMAGE MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    background: #000e;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal img {
+    max-width: 95%;
+    max-height: 85vh;
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px 5px;
+    }
+
+    .hero {
+        min-height: 530px;
+        padding: 65px 18px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 48px 5%;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+
+    .map-box iframe {
+        height: 300px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🌺 Tikulipar Durga Puja</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#aarti">Aarti</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <div class="hero-content">
+        <div class="badge">🌸 Durga Puja Special • Bihar Sharif 🌸</div>
+
+        <h1>
+            Tikulipar <span>Durga Puja</span>
+        </h1>
+
+        <p>
+            जय माता दी! 🙏<br>
+            Welcome to the devotional celebration of Maa Durga.
+            Explore the pandal, experience the festive atmosphere,
+            and seek the blessings of Maa Durga.
+        </p>
+
+        <a href="#about" class="btn">Explore Pandal ✨</a>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Tiklupar+Durga+Puja+Bihar+Sharif+Bihar"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline">
+          📍 Get Location
+        </a>
+
+        <br>
+
+        <button class="btn" onclick="showerFlowers()">
+            🌸 Shower Flowers
+        </button>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="section-title">
+        <h2>About <span>Tikulipar Durga Puja</span></h2>
+        <p>A celebration of devotion, faith and happiness.</p>
+    </div>
+
+    <div class="about-box">
+        <p>
+            <strong>Tikulupar Durga Puja</strong> is a pandal destination
+            searched for by devotees celebrating the festival in the
+            Bihar Sharif area of Bihar.
+        </p>
+
+        <p>
+            During Durga Puja, devotees worship Maa Durga and celebrate
+            the victory of good over evil. Families visit pandals,
+            offer prayers and enjoy the festive atmosphere.
+        </p>
+
+        <p>
+            <strong>Note:</strong> The exact history, annual theme,
+            programme timings and current-year pandal photographs
+            should be confirmed locally before adding specific details.
+        </p>
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+    <div class="section-title">
+        <h2>Puja <span>Highlights</span></h2>
+        <p>Discover the spirit of Durga Puja.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">🙏</div>
+            <h3>Maa Durga Darshan</h3>
+            <p>Offer your prayers and seek the blessings of Maa Durga.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌺</div>
+            <h3>Beautiful Decorations</h3>
+            <p>Enjoy the colours, lights and festive decorations of Puja.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪔</div>
+            <h3>Aarti & Bhakti</h3>
+            <p>Feel the devotional spirit through prayers and aarti.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎉</div>
+            <h3>Festival Celebration</h3>
+            <p>Celebrate the joy of Navratri and Durga Puja with family.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+    <div class="section-title">
+        <h2>Photo <span>Gallery</span></h2>
+        <p>Illustrative Durga Puja images. These are not verified photographs of Tiklupar Pandal.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img
+              src="tiku.jpg"
+              alt="Durga Puja celebration"
+              loading="lazy"
+              onclick="openImage(this.src)"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/2929a5/ffffff?text=Durga+Puja';">
+            <p>Durga Puja Celebration</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+              src="tikli.jpg"
+              alt="Festival lights"
+              loading="lazy"
+              onclick="openImage(this.src)"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/d62886/ffffff?text=Festival+Lights';">
+            <p>Festival Lights</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+              src="maa5.jpg"
+              alt="Maa Durga illustration"
+              loading="lazy"
+              onclick="openImage(this.src)">
+            <p>Maa Durga</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- AARTI -->
+<section class="aarti" id="aarti">
+    <div class="section-title">
+        <h2>Maa Durga <span>Aarti</span></h2>
+        <p>Listen to devotional songs and prayers.</p>
+    </div>
+
+    <div class="aarti-box">
+        <div class="om">🪔</div>
+
+        <h3>Jai Ambe Gauri 🙏</h3>
+
+        <p style="margin:15px 0; line-height:1.8;">
+            Let devotion fill your heart with peace, hope and positivity.
+        </p>
+
+        <a
+          class="btn"
+          href="https://www.youtube.com/results?search_query=Jai+Ambe+Gauri+Durga+Aarti"
+          target="_blank"
+          rel="noopener">
+          ▶ Listen to Durga Aarti
+        </a>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+    <div class="section-title">
+        <h2>Find <span>Tiklupar Pandal</span></h2>
+        <p>Open Google Maps to search for the pandal and get directions.</p>
+    </div>
+
+    <a
+      class="btn"
+      href="https://www.google.com/maps/search/?api=1&query=Tiklupar+Durga+Puja+Bihar+Sharif+Bihar"
+      target="_blank"
+      rel="noopener">
+      📍 Open Google Maps
+    </a>
+
+    <div class="map-box">
+        <iframe
+          title="Search for Tiklupar Durga Puja on Google Maps"
+          src="https://maps.google.com/maps?q=Tiklupar%20Durga%20Puja%20Bihar%20Sharif%20Bihar&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <p>📍 Tiklupar area, Bihar Sharif, Bihar — confirm the exact pandal location on Maps.</p>
+</section>
+
+<footer>
+    <p>🌺 <span>Tiklupar Durga Puja</span> 🌺</p>
+    <p>Made with ❤️ for Maa Durga</p>
+    <p>जय माता दी 🙏</p>
+    <p><a href="index.html" style="color:#ffd166;">← Back to All Pandals</a></p>
+</footer>
+
+<!-- IMAGE MODAL -->
+<div class="modal" id="imageModal" onclick="closeImage()">
+    <span class="modal-close">&times;</span>
+    <img id="modalImage" src="" alt="Expanded gallery image">
+</div>
+
+<script>
+/* FLOWER SHOWER */
+function showerFlowers() {
+    const flowers = ["🌸", "🌺", "🌼", "🌷", "💮", "✨"];
+
+    for (let i = 0; i < 120; i++) {
+        setTimeout(() => {
+            const flower = document.createElement("div");
+            flower.className = "flower";
+            flower.textContent =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.fontSize = (18 + Math.random() * 20) + "px";
+            flower.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(flower);
+
+            setTimeout(() => {
+                flower.remove();
+            }, 7500);
+        }, i * 25);
+    }
+}
+
+/* IMAGE MODAL */
+function openImage(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+/* ESCAPE KEY CLOSES IMAGE */
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeImage();
+    }
+});
+</script>
+
+</body>
+</html>

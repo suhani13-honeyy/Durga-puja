@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pulpar Badi Durga Maharani | Bihar Sharif</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    color: #4b1730;
+    overflow-x: hidden;
+}
+
+nav {
+    background: linear-gradient(90deg, #790024, #c21e4b);
+    color: white;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+nav h2 {
+    font-size: clamp(22px, 4vw, 32px);
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 7px 10px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #ffdf87;
+}
+
+.hero {
+    min-height: 650px;
+    padding: 70px 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg, #511329eF, #a83252eF),
+        url("https://images.unsplash.com/photo-1604608672516-8d4e1d9f9e2d?auto=format&fit=crop&w=1400&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffdc89;
+    color: #76102d;
+    padding: 12px 22px;
+    border-radius: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 2px 3px 10px #0005;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 8px;
+    border: none;
+    border-radius: 40px;
+    background: #ffd16e;
+    color: #72112d;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-gold {
+    background: #fff;
+}
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #a30d3b;
+    font-size: clamp(27px, 4vw, 38px);
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    max-width: 750px;
+    text-align: center;
+    line-height: 1.8;
+    margin: 0 auto 35px;
+    color: #76515e;
+}
+
+.about-box {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    line-height: 1.9;
+    box-shadow: 0 8px 25px #0001;
+    border-left: 5px solid #b71948;
+}
+
+.about-box h3 {
+    color: #a30d3b;
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px #0001;
+    border-bottom: 4px solid #e7ad4c;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card .icon {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #a30d3b;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px #0001;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-item p {
+    text-align: center;
+    padding: 15px;
+    color: #97123b;
+    font-weight: bold;
+}
+
+.note {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #76515e;
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+.aarti {
+    background: linear-gradient(135deg, #670b2c, #a71943);
+    color: white;
+    text-align: center;
+}
+
+.aarti .section-title {
+    color: #ffdf8c;
+}
+
+.aarti .subtitle {
+    color: #fff0f4;
+}
+
+.aarti-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff12;
+    border: 1px solid #ffffff40;
+    border-radius: 20px;
+}
+
+.aarti-box h3 {
+    color: #ffdf8c;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.aarti-box p {
+    line-height: 1.9;
+}
+
+.location-box {
+    max-width: 900px;
+    background: white;
+    padding: 25px;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px #0001;
+}
+
+.location-box h3 {
+    color: #a30d3b;
+    margin-bottom: 15px;
+}
+
+.location-box p {
+    line-height: 1.8;
+}
+
+.map {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.flower {
+    position: fixed;
+    top: -80px;
+    z-index: 99999;
+    pointer-events: none;
+    user-select: none;
+    animation: flowerFall linear forwards;
+}
+
+@keyframes flowerFall {
+    0% {
+        transform: translateY(-5vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(115vh) rotate(800deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    background: #43081f;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+}
+
+footer a {
+    color: #ffdf8c;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        font-size: 15px;
+        margin: 7px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 50px 18px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 45px 18px;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+
+    .map {
+        height: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>🌺 Pulpar Badi Durga Maharani</h2>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#aarti">Aarti</a>
+        <a href="#location">Location</a>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="badge">🪔 Durga Puja Special</div>
+
+        <h1>🌺 Pulpar Badi Durga Maharani 🌺</h1>
+
+        <p>
+            Discover the devotion and festive spirit of
+            Badi Durga Maharani in Pulpar, Bihar Sharif.
+            Explore the pandal's history, worship traditions
+            and the special charm of this Durga Puja celebration.
+        </p>
+
+        <a href="#about" class="btn">Explore Pandal</a>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Pulpar+Badi+Durga+Maharani+Bihar+Sharif"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn">
+            📍 View Location
+        </a>
+
+        <br>
+
+        <button class="btn btn-gold" onclick="showerFlowers()">
+            🌸 Shower Flowers
+        </button>
+
+    </div>
+</header>
+
+<section id="about">
+    <h2 class="section-title">🙏 About Badi Durga Maharani</h2>
+
+    <p class="subtitle">
+        Learn about the distinctive pandal themes and the
+        devotion associated with Badi Durga Maharani.
+    </p>
+
+    <div class="about-box">
+        <h3>🌺 What Makes This Pandal Special?</h3>
+
+        <p>
+            Pulpar Badi Durga Maharani is a well-known Durga Puja
+            destination in Bihar Sharif. Devotees visit to offer
+            prayers and seek the blessings of Maa Durga.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>🏰 Special attraction — Fort-inspired pandal:</strong>
+            The pandal has featured grand historical architecture
+            in past years. According to a report published in 2018,
+            its design that year was inspired by Chittorgarh Fort.
+            The design featured multiple levels, window-like
+            openings and decorative craftsmanship.
+        </p>
+
+        <br>
+
+        <p>
+            Such themed decorations are a memorable part of the
+            city's festive atmosphere. The exact theme and design
+            for 2026 should be confirmed locally, as the decoration
+            may change every year.
+        </p>
+    </div>
+</section>
+
+<section style="background:#fff0f3;">
+    <h2 class="section-title">✨ Pandal Highlights</h2>
+
+    <p class="subtitle">
+        The features that make a themed Durga Puja pandal special.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🏰</div>
+            <h3>Historical Architecture</h3>
+            <p>
+                Past pandal designs have drawn inspiration from
+                grand forts and historical structures.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌺</div>
+            <h3>Badi Durga Maharani</h3>
+            <p>
+                Devotees gather to offer prayers and seek
+                Maa Durga's blessings during the festival.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪔</div>
+            <h3>Puja & Aarti</h3>
+            <p>
+                Worship and aarti are important traditions
+                associated with Durga Puja celebrations.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Festive Decorations</h3>
+            <p>
+                Decorative details and festive lighting can
+                add to the beauty of a pandal.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title">📸 Pandal Photo Gallery</h2>
+
+    <p class="subtitle">
+        Festival-inspired photographs. Tap an image to view it larger.
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="pul.jpg"
+                alt="Festival decoration"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>🌺 Festival Decorations</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="light2.jpg"
+                alt="Colourful festive art"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>✨ Colourful Celebration</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="pul1.jpg"
+                alt="Festive decoration and lights"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>🪔 Festive Atmosphere</p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        These are illustrative festival images, not verified
+        photographs of Pulpar Badi Durga Maharani. Replace them
+        with actual local pandal photos when available.
+    </p>
+</section>
+
+<section class="aarti" id="aarti">
+    <h2 class="section-title">🪔 Maa Durga Aarti</h2>
+
+    <p class="subtitle">
+        Listen to devotional music and celebrate the spirit of Maa Durga.
+    </p>
+
+    <div class="aarti-box">
+        <h3>🌺 Jai Mata Di 🌺</h3>
+
+        <p>
+            May Maa Durga bless everyone with happiness,
+            courage, peace and prosperity.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.youtube.com/results?search_query=Maa+Durga+Aarti"
+            target="_blank"
+            rel="noopener noreferrer">
+            ▶ Listen to Durga Aarti
+        </a>
+
+        <p class="note" style="color:white;">
+            Actual pandal aarti timings have not been verified.
+            Please confirm them with the puja committee.
+        </p>
+    </div>
+</section>
+
+<section id="location">
+    <h2 class="section-title">📍 Pandal Location</h2>
+
+    <p class="subtitle">
+        Find Pulpar Badi Durga Maharani in Bihar Sharif.
+    </p>
+
+    <div class="location-box">
+        <h3>Pulpar, Bihar Sharif, Nalanda, Bihar</h3>
+
+        <p>
+            Open Google Maps to search for the pandal and
+            plan your route.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.google.com/maps/search/?api=1&query=Pulpar+Badi+Durga+Maharani+Bihar+Sharif"
+            target="_blank"
+            rel="noopener noreferrer">
+            🗺️ Open Google Maps
+        </a>
+
+        <iframe
+            class="map"
+            title="Map search for Pulpar Badi Durga Maharani"
+            src="https://maps.google.com/maps?q=Pulpar%2C%20Bihar%20Sharif%2C%20Bihar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+        </iframe>
+
+        <p class="note">
+            The map shows the Pulpar area and may not mark
+            the exact temporary pandal entrance.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <h3>🌺 Pulpar Badi Durga Maharani 🌺</h3>
+
+    <p>Celebrating faith, devotion and the blessings of Maa Durga.</p>
+
+    <p>
+        <a href="index.html">← Back to All Bihar Sharif Pandals</a>
+    </p>
+
+    <p>Made with ❤️ for Durga Puja | Bihar Sharif</p>
+
+    <p>© <span id="year"></span> Durga Puja Special</p>
+</footer>
+
+<!-- Image popup -->
+<div
+    id="photoModal"
+    onclick="closePhoto()"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:#000e;
+        z-index:100000;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+    ">
+
+    <button
+        onclick="closePhoto()"
+        aria-label="Close image"
+        style="
+            position:absolute;
+            top:15px;
+            right:25px;
+            font-size:40px;
+            color:white;
+            border:0;
+            background:none;
+        ">×</button>
+
+    <img
+        id="modalImage"
+        alt="Enlarged pandal image"
+        style="
+            max-width:95%;
+            max-height:85vh;
+            object-fit:contain;
+            border-radius:12px;
+        ">
+</div>
+
+<script>
+function showerFlowers() {
+    const flowers = [
+        "🌸", "🌺", "🌼", "🌷", "💮",
+        "🌻", "🌹", "🏵️"
+    ];
+
+    for (let i = 0; i < 200; i++) {
+        setTimeout(() => {
+            const flower = document.createElement("div");
+
+            flower.className = "flower";
+            flower.textContent =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.fontSize =
+                (25 + Math.random() * 30) + "px";
+
+            flower.style.animationDuration =
+                (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(flower);
+
+            flower.addEventListener("animationend", () => {
+                flower.remove();
+            }, { once: true });
+
+        }, i * 20);
+    }
+}
+
+function openPhoto(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("photoModal").style.display = "flex";
+}
+
+function closePhoto() {
+    document.getElementById("photoModal").style.display = "none";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

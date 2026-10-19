@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sohsarai Durga Puja Pandal | Bihar Sharif</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f1;
+    color: #4c1830;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(90deg, #76052c, #c3214b);
+    color: white;
+    padding: 20px 12px;
+    text-align: center;
+}
+
+nav h2 {
+    font-size: clamp(22px, 4vw, 32px);
+    margin-bottom: 15px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 7px 10px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffdc87;
+}
+
+/* HERO */
+.hero {
+    min-height: 650px;
+    padding: 65px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(135deg, #541329ed, #a33b58ed),
+        url("https://images.unsplash.com/photo-1604608672516-8d4e1d9f9e2d?auto=format&fit=crop&w=1400&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffda82;
+    color: #76052c;
+    padding: 12px 22px;
+    border-radius: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 62px);
+    line-height: 1.25;
+    margin-bottom: 25px;
+    text-shadow: 2px 3px 10px #0005;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffd16e;
+    color: #72112d;
+    border: none;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-gold {
+    background: white;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 7%;
+}
+
+.section-title {
+    color: #a30d3b;
+    text-align: center;
+    font-size: clamp(27px, 4vw, 38px);
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+    line-height: 1.8;
+    color: #76515e;
+}
+
+/* ABOUT */
+.about-box {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    line-height: 1.9;
+    box-shadow: 0 8px 25px #0001;
+    border-left: 5px solid #bd1949;
+}
+
+.about-box h3 {
+    color: #a30d3b;
+    margin-bottom: 15px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px #0001;
+    border-bottom: 4px solid #e7ad4c;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card .icon {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #a30d3b;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px #0001;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-item p {
+    padding: 15px;
+    text-align: center;
+    color: #97123b;
+    font-weight: bold;
+}
+
+.note {
+    max-width: 800px;
+    margin: 25px auto 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #76515e;
+}
+
+/* AARTI */
+.aarti {
+    background: linear-gradient(135deg, #670b2c, #a71943);
+    color: white;
+    text-align: center;
+}
+
+.aarti .section-title {
+    color: #ffdf8c;
+}
+
+.aarti .subtitle {
+    color: #fff0f4;
+}
+
+.aarti-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff12;
+    border: 1px solid #ffffff40;
+    border-radius: 20px;
+}
+
+.aarti-box h3 {
+    color: #ffdf8c;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.aarti-box p {
+    line-height: 1.9;
+}
+
+/* LOCATION */
+.location-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px #0001;
+}
+
+.location-box h3 {
+    color: #a30d3b;
+    margin-bottom: 15px;
+}
+
+.location-box p {
+    line-height: 1.8;
+}
+
+.map {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* FLOWER SHOWER */
+.flower {
+    position: fixed;
+    top: -80px;
+    z-index: 99999;
+    pointer-events: none;
+    user-select: none;
+    animation: flowerFall linear forwards;
+}
+
+@keyframes flowerFall {
+    0% {
+        transform: translateY(-5vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(115vh) rotate(800deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: #43081f;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+}
+
+footer a {
+    color: #ffdf8c;
+    text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 15px;
+        margin: 7px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 50px 18px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 45px 18px;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+
+    .map {
+        height: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>🌺 Sohsarai Durga Puja</h2>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#aarti">Aarti</a>
+        <a href="#location">Location</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="badge">🪔 Durga Puja Special</div>
+
+        <h1>🌺 Sohsarai Durga Puja Pandal 🌺</h1>
+
+        <p>
+            Welcome to the devotional celebration of Maa Durga
+            in Sohsarai, Bihar Sharif. Discover the traditions,
+            festive atmosphere, puja and aarti associated with
+            this local Durga Puja celebration.
+        </p>
+
+        <a href="#about" class="btn">Explore Pandal</a>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Sohsarai+Durga+Puja+Bihar+Sharif"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn">
+            📍 Find Location
+        </a>
+
+        <br>
+
+        <button class="btn btn-gold" onclick="showerFlowers()">
+            🌸 Shower Flowers
+        </button>
+
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">🙏 About Sohsarai Durga Puja</h2>
+
+    <p class="subtitle">
+        Discover the religious traditions and community celebrations
+        associated with Durga Puja in Sohsarai.
+    </p>
+
+    <div class="about-box">
+
+        <h3>🌺 Maa Durga Puja in Sohsarai</h3>
+
+        <p>
+            Sohsarai is an area of Bihar Sharif in Nalanda district,
+            Bihar. Durga Puja is celebrated in Bihar Sharif with
+            religious devotion and decorated pandals.
+        </p>
+
+        <br>
+
+        <p>
+            During Durga Puja, devotees visit pandals to pray to
+            Maa Durga. The festival is associated with worship,
+            aarti, decorations and community gatherings.
+        </p>
+
+        <br>
+
+        <h3>✨ What Is Special About Sohsarai?</h3>
+
+        <p>
+            Sohsarai is one of the local areas associated with
+            Bihar Sharif's festive celebrations. Its location
+            makes it part of the city's wider Durga Puja
+            pandal-visiting tradition.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>📜 Since when has Maa Durga been worshipped here?</strong>
+        </p>
+
+        <p>
+            The exact year in which the Sohsarai Durga Puja
+            tradition began could not be verified from reliable
+            historical sources available for this page.
+            We therefore do not claim an unconfirmed starting year.
+            The local puja committee or long-time residents may
+            be able to provide the correct history.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>2026 pandal theme:</strong>
+            The exact decoration, special attractions and
+            programme details should be confirmed locally.
+        </p>
+
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section style="background:#fff0f3;">
+    <h2 class="section-title">✨ Puja Highlights</h2>
+
+    <p class="subtitle">
+        Important traditions associated with the Durga Puja festival.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🙏</div>
+            <h3>Maa Durga Darshan</h3>
+            <p>
+                Devotees offer prayers and seek blessings from
+                Maa Durga during the festival.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪔</div>
+            <h3>Aarti & Worship</h3>
+            <p>
+                Devotional prayers and aarti form an important
+                part of the celebrations.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌸</div>
+            <h3>Festival Decorations</h3>
+            <p>
+                Decorative lighting and flowers can create
+                a colourful festive atmosphere.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎉</div>
+            <h3>Community Celebration</h3>
+            <p>
+                Families and visitors come together to take
+                part in the festive spirit of Durga Puja.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2 class="section-title">📸 Sohsarai Pandal Gallery</h2>
+
+    <p class="subtitle">
+        Festival-inspired images. Tap an image to enlarge it.
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="sor1.jpg"
+                alt="Festival decoration"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>🌺 Festival Decorations</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="sor.jpg"
+                alt="Colourful festival art"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>✨ Colourful Celebration</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="sor3.jpg"
+                alt="Festive lighting"
+                loading="lazy"
+                onclick="openPhoto(this.src)">
+            <p>🪔 Festive Atmosphere</p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        These are illustrative festival images, not verified
+        photographs of the actual Sohsarai pandal. Replace them
+        with real local photographs when available.
+    </p>
+</section>
+
+<!-- AARTI -->
+<section class="aarti" id="aarti">
+    <h2 class="section-title">🪔 Maa Durga Aarti</h2>
+
+    <p class="subtitle">
+        Listen to devotional aarti and celebrate the blessings of Maa Durga.
+    </p>
+
+    <div class="aarti-box">
+
+        <h3>🌺 Jai Mata Di 🌺</h3>
+
+        <p>
+            May Maa Durga bless everyone with happiness,
+            courage, peace and prosperity.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.youtube.com/results?search_query=Maa+Durga+Aarti"
+            target="_blank"
+            rel="noopener noreferrer">
+            ▶ Listen to Durga Aarti
+        </a>
+
+        <p class="note" style="color:white;">
+            The actual Sohsarai pandal's aarti timings have not
+            been verified. Please confirm them locally.
+        </p>
+
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+    <h2 class="section-title">📍 Sohsarai Location</h2>
+
+    <p class="subtitle">
+        Search for Sohsarai in Bihar Sharif using Google Maps.
+    </p>
+
+    <div class="location-box">
+
+        <h3>Sohsarai, Bihar Sharif, Nalanda, Bihar</h3>
+
+        <p>
+            Open the map to search for the pandal and plan your route.
+            The exact temporary pandal location may need local confirmation.
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.google.com/maps/search/?api=1&query=Sohsarai+Durga+Puja+Bihar+Sharif"
+            target="_blank"
+            rel="noopener noreferrer">
+            🗺️ Open Google Maps
+        </a>
+
+        <iframe
+            class="map"
+            title="Map of Sohsarai Bihar Sharif"
+            src="https://maps.google.com/maps?q=Sohsarai%2C%20Bihar%20Sharif%2C%20Bihar&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+        </iframe>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>🌺 Sohsarai Durga Puja 🌺</h3>
+
+    <p>Celebrating devotion, faith and the blessings of Maa Durga.</p>
+
+    <p>
+        <a href="index.html">← Back to All Bihar Sharif Pandals</a>
+    </p>
+
+    <p>Made with ❤️ for Durga Puja | Bihar Sharif</p>
+
+    <p>© <span id="year"></span> Sohsarai Durga Puja</p>
+</footer>
+
+<!-- PHOTO POPUP -->
+<div
+    id="photoModal"
+    onclick="closePhoto()"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:#000e;
+        z-index:100000;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+    ">
+
+    <button
+        onclick="closePhoto()"
+        aria-label="Close photo"
+        style="
+            position:absolute;
+            top:15px;
+            right:25px;
+            font-size:40px;
+            color:white;
+            border:0;
+            background:none;
+        ">×</button>
+
+    <img
+        id="modalImage"
+        alt="Enlarged festival image"
+        style="
+            max-width:95%;
+            max-height:85vh;
+            object-fit:contain;
+            border-radius:12px;
+        ">
+</div>
+
+<script>
+/* SHOWER FLOWERS */
+function showerFlowers() {
+    const flowers = [
+        "🌸", "🌺", "🌼", "🌷",
+        "💮", "🌻", "🌹", "🏵️"
+    ];
+
+    for (let i = 0; i < 200; i++) {
+        setTimeout(() => {
+            const flower = document.createElement("div");
+
+            flower.className = "flower";
+
+            flower.textContent =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            flower.style.left = Math.random() * 100 + "vw";
+
+            flower.style.fontSize =
+                (25 + Math.random() * 30) + "px";
+
+            flower.style.animationDuration =
+                (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(flower);
+
+            flower.addEventListener("animationend", () => {
+                flower.remove();
+            }, { once: true });
+
+        }, i * 20);
+    }
+}
+
+/* GALLERY POPUP */
+function openPhoto(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("photoModal").style.display = "flex";
+}
+
+function closePhoto() {
+    document.getElementById("photoModal").style.display = "none";
+}
+
+/* CURRENT YEAR */
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

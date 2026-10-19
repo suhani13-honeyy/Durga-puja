@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bhaisaur Durga Puja | Bihar Sharif</title>
+
+<style>
+  /* ===== MAA DURGA DIVINE BACKGROUND ===== */
+
+#durga-background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(35, 0, 20, 0.48),
+            rgba(40, 0, 30, 0.60)
+        ),
+        url("durga.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* DIVINE GOLDEN GLOW */
+
+.divine-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+        circle at 50% 40%,
+        rgba(255, 190, 50, 0.28),
+        transparent 65%
+    );
+
+    animation: divineGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes divineGlow {
+    from {
+        opacity: 0.35;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* TWINKLING STARS */
+
+#durga-stars {
+    position: absolute;
+    inset: 0;
+}
+
+.durga-star {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: #fff7bd;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 6px #ffd700,
+        0 0 14px #ffae00;
+
+    animation: starTwinkle 2s infinite alternate;
+}
+
+@keyframes starTwinkle {
+    0% {
+        opacity: 0.15;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+/* DIVINE LIGHT RAYS */
+
+.light-rays {
+    position: absolute;
+    inset: -50%;
+
+    background: repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        transparent 0deg 12deg,
+        rgba(255, 215, 0, 0.07) 13deg 15deg,
+        transparent 16deg 25deg
+    );
+
+    animation: rotateRays 50s linear infinite;
+}
+
+@keyframes rotateRays {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* FLOWER SHOWER */
+
+.durga-flower {
+    position: fixed;
+    top: -40px;
+
+    animation: flowerFall linear forwards;
+
+    will-change: transform;
+}
+
+@keyframes flowerFall {
+    0% {
+        transform: translate3d(0, -5vh, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate3d(50px, 110vh, 0) rotate(600deg);
+        opacity: 0.2;
+    }
+}
+
+/* KEEP WEBSITE CONTENT VISIBLE */
+
+body {
+    position: relative;
+    background: transparent;
+}
+
+/* Mobile optimization */
+
+@media (max-width: 600px) {
+    #durga-background {
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    .durga-star {
+        width: 2px;
+        height: 2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .divine-glow,
+    .durga-star,
+    .light-rays {
+        animation-duration: 10s;
+    }
+}
+:root {
+    --maroon: #5B1020;
+    --dark-maroon: #320813;
+    --wine: #7A1F35;
+    --gold: #D4AF37;
+    --light-gold: #F4C76B;
+    --cream: #FFF8E7;
+    --white: #FFFFFF;
+    --text: #34252A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+nav {
+    background: var(--dark-maroon);
+    color: white;
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.logo {
+    color: var(--light-gold);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--light-gold);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 15% 20%,
+        #F4C76B35, transparent 30%),
+        radial-gradient(circle at 85% 80%,
+        #D4AF3730, transparent 30%),
+        linear-gradient(135deg,
+        #320813, #5B1020, #7A1F35);
+}
+
+.hero::before {
+    content: "✦  ✧  ✨  ✦  ✧  ✨  ✦";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    color: var(--light-gold);
+    font-size: 25px;
+    letter-spacing: 15px;
+    animation: glow 2s infinite alternate;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--gold);
+    color: var(--light-gold);
+    background: #ffffff0b;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 7vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+    text-shadow: 0 0 20px #F4C76B45;
+}
+
+.hero h1 span {
+    color: var(--light-gold);
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--light-gold);
+    color: var(--dark-maroon);
+    padding: 14px 24px;
+    margin: 6px;
+    border: 2px solid var(--light-gold);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px #D4AF3740;
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: var(--gold);
+}
+
+/* COMMON SECTIONS */
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: clamp(27px, 5vw, 38px);
+    color: var(--maroon);
+    margin-bottom: 12px;
+}
+
+.section-title h2 span {
+    color: #A77B12;
+}
+
+.section-title p {
+    line-height: 1.8;
+    color: #71616A;
+}
+
+/* ABOUT */
+
+.about {
+    background: var(--white);
+}
+
+.about-box {
+    max-width: 950px;
+    margin: auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #FFF8E7, #FFFFFF);
+    border: 1px solid #E8D8A5;
+    border-left: 5px solid var(--gold);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px #5B102010;
+}
+
+.about-box p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 13px;
+}
+
+.about-box strong {
+    color: var(--maroon);
+}
+
+/* HIGHLIGHTS */
+
+.highlights {
+    background: #F7EEDD;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 17px;
+    text-align: center;
+    border: 1px solid #E8D8A5;
+    border-bottom: 4px solid var(--gold);
+    box-shadow: 0 7px 20px #5B102010;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-bottom-color: var(--maroon);
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--maroon);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #71616A;
+    line-height: 1.8;
+}
+
+/* GALLERY */
+
+.gallery {
+    background: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    background: var(--cream);
+    border: 1px solid #E8D8A5;
+    border-radius: 16px;
+    box-shadow: 0 7px 20px #5B102010;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-item p {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--maroon);
+}
+
+/* AARTI */
+
+.aarti {
+    text-align: center;
+    background: #F7EEDD;
+}
+
+.aarti-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px 20px;
+    border: 1px solid #E8D8A5;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 8px 25px #5B102010;
+}
+
+.om {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+/* LOCATION */
+
+.location {
+    background: var(--dark-maroon);
+    color: white;
+    text-align: center;
+}
+
+.location .section-title h2 {
+    color: white;
+}
+
+.location .section-title h2 span {
+    color: var(--light-gold);
+}
+
+.location .section-title p {
+    color: #F5E7D2;
+}
+
+.map-box {
+    max-width: 950px;
+    margin: 25px auto;
+    overflow: hidden;
+    border: 4px solid var(--gold);
+    border-radius: 17px;
+}
+
+.map-box iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 28px 15px;
+    background: #26050D;
+    color: white;
+    text-align: center;
+    line-height: 2;
+}
+
+footer span {
+    color: var(--light-gold);
+}
+
+/* FLOWER SHOWER */
+
+.flower {
+    position: fixed;
+    top: -50px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-5vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(115vh) rotate(600deg);
+        opacity: 0.2;
+    }
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.55;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* IMAGE POPUP */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: #000e;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal img {
+    max-width: 95%;
+    max-height: 85vh;
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 38px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px 5px;
+    }
+
+    .hero {
+        min-height: 530px;
+        padding: 60px 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 48px 5%;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+
+    .map-box iframe {
+        height: 300px;
+    }
+}
+</style>
+</head>
+
+<body>
+  <!-- Maa Durga Animated Background -->
+<div id="durga-background">
+
+    <div class="divine-glow"></div>
+
+    <div id="durga-stars"></div>
+
+    <div class="light-rays"></div>
+
+    <div id="durga-flowers"></div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">🪔 Bhaisaur Durga Ji</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">Importance</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#aarti">Aarti</a>
+        <a href="#location">Location</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✨ Durga Puja Special • Bihar Sharif ✨
+        </div>
+
+        <h1>
+            Bhaisaur <span>Durga Ji</span>
+        </h1>
+
+        <p>
+            जय माता दी! 🙏<br>
+            Welcome to Bhaisaur Durga Ji.<br>
+            Discover the importance of devotion, celebrate the
+            spirit of Durga Puja and seek the blessings of Maa Durga.
+        </p>
+
+        <a href="#about" class="btn">
+            Explore & Discover ✨
+        </a>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Bhaisaur+Durga+Puja+Bihar+Sharif+Bihar"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline">
+          📍 Get Location
+        </a>
+
+        <br>
+
+        <button class="btn" onclick="showerFlowers()">
+            🌼 Shower Flowers
+        </button>
+
+    </>
+
+</header>
+
+<!-- ABOUT AND IMPORTANCE -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+        <h2>Importance of <span>Bhaisaur Durga Ji</span></h2>
+        <p>Faith, devotion and the message of Maa Durga.</p>
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            <strong>Bhaisaur Durga Ji</strong> is the focus of this
+            devotional website celebrating Maa Durga and the spirit
+            of Durga Puja in the Bihar Sharif area.
+        </p>
+
+        <p>
+            The importance of Durga Puja lies in the worship of Maa Durga,
+            who symbolises courage, strength and the victory of good over
+            evil. Devotees pray to the Goddess for peace, happiness and
+            prosperity.
+        </p>
+
+        <p>
+            For devotees, visiting a Durga Puja pandal can be an
+            opportunity to offer prayers, spend time with family and
+            participate in the festive atmosphere.
+        </p>
+
+        <p>
+            The exact local history, founding year, special traditions
+            and annual theme of Bhaisaur Durga Puja have not been
+            independently verified here. These details should be
+            confirmed with local organisers before publication.
+        </p>
+
+        <p>
+            <strong>जय माता दी! 🙏</strong>
+            May Maa Durga bless everyone with courage, peace and success.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<section class="highlights">
+
+    <div class="section-title">
+        <h2>Puja <span>Highlights</span></h2>
+        <p>Experience the beauty and devotion of Durga Puja.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🙏</div>
+            <h3>Maa Durga Darshan</h3>
+            <p>Offer prayers and seek the blessings of Maa Durga.🌺 Maa Durga Darshan – Divine Blessings 🌺
+
+Welcome to the divine darshan of Maa Durga, the symbol of strength, courage, love, and the victory of good over evil. Her divine appearance, beautiful smile, and magnificent decorations fill the hearts of devotees with peace, devotion, and positivity.
+
+During the auspicious festival of Durga Puja, Bihar Sharif transforms into a beautiful place of devotion and celebration. The magnificent pandals, colorful lights, stunning decorations, devotional songs, and enchanting aartis create a truly divine atmosphere.
+
+Devotees visit Maa Durga's pandals with deep faith and devotion to seek her blessings for happiness, prosperity, good health, and success. Her divine presence inspires everyone to follow the path of truth, courage, kindness, and righteousness.
+
+Come and experience the spiritual beauty of Maa Durga Darshan, admire her magnificent idol, and immerse yourself in the divine atmosphere of Durga Puja. May Maa Durga bless every family with peace, happiness, prosperity, and endless love.
+
+🌸 May Maa Durga remove all obstacles from our lives and fill our hearts with strength, hope, and positivity. 🌸
+
+🙏 Jai Mata Di! Jai Maa Durga! 🙏</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪔</div>
+            <h3>Aarti & Bhakti</h3>
+            <p>Experience devotional songs, prayers and spiritual peace.
+            🪔 Aarti & Bhakti – Divine Devotion 🪔
+
+Experience the divine power of Maa Durga through the sacred sounds of Aarti, devotional songs, and heartfelt prayers. The melodious chants of “Jai Ambe Gauri” and “Jai Mata Di” create a peaceful and spiritual atmosphere that fills every heart with love, faith, and devotion.
+
+During Durga Puja, devotees gather in front of Maa Durga's beautifully decorated idol, light traditional diyas, offer flowers, and sing devotional songs to seek her divine blessings. The sound of bells, the glow of aarti lamps, and the fragrance of incense make the entire atmosphere feel sacred and magical.
+
+Bhakti is not just about prayers; it is about surrendering our hearts to the Divine Mother with pure love and unwavering faith. Through Aarti and Bhakti, we express our gratitude to Maa Durga and pray for happiness, good health, prosperity, and peace for everyone.
+
+Come, join the divine celebration, sing the sacred aarti, and immerse yourself in the spiritual beauty of Maa Durga's devotion.
+
+🌺 Let the divine light of Maa Durga remove darkness from our lives and fill our hearts with faith, courage, and positivity. 🌺
+
+🙏 Jai Mata Di! Jai Maa Durga! 🙏</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Golden Lights</h3>
+            <p>Enjoy the traditional festive atmosphere and decorations.
+            ✨ Golden Light – Divine Glow ✨
+
+Experience the magical beauty of golden lights illuminating the divine surroundings of Maa Durga. The warm golden glow creates a heavenly atmosphere, adding elegance, beauty, and a touch of spirituality to the entire Durga Puja celebration.
+
+The sparkling golden lights shine like divine blessings from the heavens, highlighting Maa Durga's magnificent idol and the beautiful decorations of the pandal. Their enchanting glow fills the atmosphere with positivity, devotion, and festive joy.
+
+Let the golden lights sparkle around you, creating a magical experience that celebrates the power, grace, and divine beauty of Maa Durga.
+
+🌟 May the divine golden light of Maa Durga illuminate our lives with happiness, prosperity, peace, and endless blessings. 🌟
+
+🙏 Jai Mata Di! 🙏</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌺</div>
+            <h3>Festival of Faith</h3>
+            <p>Celebrate devotion, hope and the victory of good over evil.
+            🌺 Festival & Faith – A Celebration of Devotion 🌺
+
+Durga Puja is not just a festival; it is a beautiful celebration of faith, devotion, culture, and the victory of good over evil. It brings people together with hearts full of love and devotion to seek the divine blessings of Maa Durga.
+
+During this auspicious festival, Bihar Sharif comes alive with magnificent pandals, colorful decorations, sparkling lights, devotional songs, and the sacred sounds of aarti. The entire city is filled with spiritual energy, happiness, and festive excitement.
+
+Devotees visit Maa Durga's pandals with deep faith, offer flowers and prayers, and seek blessings for their families. The festival teaches us the importance of courage, kindness, truth, unity, and the eternal power of good over evil.
+
+Faith connects our hearts with the Divine Mother, while the festival gives us an opportunity to celebrate our traditions, share happiness, and create unforgettable memories with our loved ones.
+
+✨ May this sacred festival strengthen our faith, fill our hearts with devotion, and bring peace, prosperity, and happiness to every home. ✨
+
+🙏 Celebrate with faith, shine with devotion, and spread the blessings of Maa Durga everywhere!
+
+🌸 Jai Mata Di! Jai Maa Durga! 🌸</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+        <h2>Photo <span>Gallery</span></h2>
+        <p>
+            Illustrative images for the website.
+            These are not verified photographs of Bhaisaur Pandal.
+        </p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <marquee><img
+              src="maa.jpg"
+              alt="Maa Durga"
+              loading="lazy"
+              onclick="openImage(this.src)"></marquee>
+
+            <p>Maa Durga</p>
+        </div>
+
+        <div class="gallery-item">
+            <img
+              src="bhai.jpg"
+              alt="Durga Puja Pandal"
+              loading="lazy"
+              onclick="openImage(this.src)">
+
+            <p>Durga Puja Pandal</p>
+        </div>
+
+        <div class="gallery-item">
+        <marquee><img
+              src="light.jpg"
+              alt="Golden Festival Lights"
+              loading="lazy"
+              onclick="openImage(this.src)"></marquee>
+
+            <p>Golden Festival Lights</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- AARTI -->
+
+<section class="aarti" id="aarti">
+
+    <div class="section-title">
+        <h2>Maa Durga <span>Aarti</span></h2>
+        <p>Listen to devotional songs and prayers.</p>
+    </div>
+
+    <div class="aarti-box">
+
+        <div class="om">🪔</div>
+
+        <h3 style="color:#5B1020;">
+            Jai Ambe Gauri 🙏
+        </h3>
+
+        <p style="margin:15px 0;line-height:1.8;">
+            May Maa Durga fill every heart with courage,
+            devotion, peace and happiness.
+        </p>
+
+        <a
+          class="btn"
+          href="https://www.youtube.com/results?search_query=Jai+Ambe+Gauri+Durga+Aarti"
+          target="_blank"
+          rel="noopener">
+          ▶ Listen to Durga Aarti
+        </a>
+
+    </div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="location" id="location">
+
+    <div class="section-title">
+        <h2>Find <span>Bhaisaur Durga Ji</span></h2>
+        <p>Search for the location and get directions on Google Maps.</p>
+    </div>
+
+    <a
+      class="btn"
+      href="https://www.google.com/maps/search/?api=1&query=Bhaisaur+Durga+Puja+Bihar+Sharif+Bihar"
+      target="_blank"
+      rel="noopener">
+      📍 Open Google Maps
+    </a>
+
+    <div class="map-box">
+
+        <iframe
+          title="Bhaisaur Durga Puja Google Maps search"
+          src="https://maps.google.com/maps?q=Bhaisaur%20Durga%20Puja%20Bihar%20Sharif%20Bihar&z=14&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </div>
+
+    <p>
+        📍 Bhaisaur area, Bihar Sharif — please confirm the exact
+        pandal location on Google Maps.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>🪔 <span>Bhaisaur Durga Ji</span> 🪔</p>
+
+    <p>Made with ❤️ for Maa Durga</p>
+
+    <p>जय माता दी 🙏</p>
+
+    <p>
+        <a href="index.html"
+           style="color:#F4C76B;text-decoration:none;">
+            ← Back to All Pandals
+        </a>
+    </p>
+
+</footer>
+
+<!-- IMAGE POPUP -->
+
+<div class="modal" id="imageModal" onclick="closeImage()">
+
+    <span class="modal-close">&times;</span>
+
+    <img id="modalImage" src="" alt="Expanded gallery image">
+
+</div>
+
+<script>
+
+/* FLOWER SHOWER EFFECT */
+
+function showerFlowers() {
+
+    const flowers = ["🌼", "🌸", "🌺", "✨", "💮", "🌻"];
+
+    for (let i = 0; i < 120; i++) {
+
+        setTimeout(function() {
+
+            const flower = document.createElement("div");
+
+            flower.className = "flower";
+
+            flower.textContent =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            flower.style.left = Math.random() * 100 + "vw";
+
+            flower.style.fontSize =
+                (18 + Math.random() * 20) + "px";
+
+            flower.style.animationDuration =
+                (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(flower);
+
+            setTimeout(function() {
+                flower.remove();
+            }, 7500);
+
+        }, i * 25);
+
+    }
+
+}
+
+/* OPEN GALLERY IMAGE */
+
+function openImage(src) {
+
+    document.getElementById("modalImage").src = src;
+
+    document.getElementById("imageModal").style.display = "flex";
+
+}
+
+/* CLOSE GALLERY IMAGE */
+
+function closeImage() {
+
+    document.getElementById("imageModal").style.display = "none";
+
+}
+
+/* ESC KEY */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeImage();
+    }
+
+});
+
+</script>
+  <script>
+// ===== GOLDEN STAR ANIMATION =====
+
+const starContainer = document.getElementById("durga-stars");
+
+for (let i = 0; i < 90; i++) {
+
+    const star = document.createElement("span");
+
+    star.className = "durga-star";
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 4 + "s";
+
+    star.style.animationDuration =
+        (1.5 + Math.random() * 3) + "s";
+
+    starContainer.appendChild(star);
+}
+
+
+// ===== DIVINE FLOWER RAIN =====
+
+const flowerContainer =
+    document.getElementById("durga-flowers");
+
+const flowerList = [
+    "🌸", "🌺", "🌼", "🌹", "✨"
+];
+
+function createDurgaFlower() {
+
+    const flower = document.createElement("span");
+
+    flower.className = "durga-flower";
+
+    flower.textContent =
+        flowerList[
+            Math.floor(Math.random() * flowerList.length)
+        ];
+
+    flower.style.left = Math.random() * 100 + "vw";
+
+    flower.style.fontSize =
+        (14 + Math.random() * 16) + "px";
+
+    flower.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    flowerContainer.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 10000);
+}
+
+setInterval(createDurgaFlower, 500);
+  </script>
+
+</body>
+</html>
